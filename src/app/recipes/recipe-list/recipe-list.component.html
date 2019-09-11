@@ -7,8 +7,6 @@
 
 <div class="list-group">
   <div class="list-group-item" *ngFor="let recipe of recipes">
-    <app-recipe-item
-      [recipe]="recipe"
-      (onRecipeSelected)="selectRecipe($event)"></app-recipe-item>
+    <app-recipe-item [recipe]="recipe"></app-recipe-item>
   </div>
 </div>
