@@ -1,14 +1,20 @@
-<a href="#"
+<a
+  [routerLink]="[index]"
   class="clearfix"
-  (click)="selectRecipe(recipe)"
-  >
+  routerLinkActive="active"
+  style="display: block;"
+>
   <div>
     <div class="float-left">
       <h4 class="list-group-item-heading">{{ recipe.name }}</h4>
-      <p class="list-group-item-text">{{recipe.desc}}</p>
+      <p class="list-group-item-text">{{ recipe.desc }}</p>
     </div>
     <div class="float-right">
-      <img [src]="recipe.imagePath" alt="" style="max-height: 50px;width:auto" />
+      <img
+        [src]="recipe.imagePath"
+        alt=""
+        style="max-height: 50px;width:auto"
+      />
     </div>
   </div>
 </a>

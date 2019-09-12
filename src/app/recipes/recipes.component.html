@@ -6,6 +6,7 @@
     <app-recipe-list></app-recipe-list>
   </div>
   <div class="col-7">
-    <app-recipe-detail [recipe]="recipeDetail" *ngIf="recipeDetail"></app-recipe-detail>
+    <router-outlet></router-outlet>
+    <!-- <app-recipe-detail [recipe]="recipeDetail" *ngIf="recipeDetail"></app-recipe-detail> -->
   </div>
 </div>

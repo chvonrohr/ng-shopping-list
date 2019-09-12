@@ -6,7 +6,10 @@
 
 <div class="row">
   <div class="col-12">
-    {{ recipe.name }}
+    <h1>{{ recipe.name }}</h1>
+    <p>{{ recipe.desc }}</p>
+
+    <img [src]="recipe.imagePath" style="width: 200px; height: auto;" class="mb-3" />
   </div>
 </div>
 
@@ -14,19 +17,14 @@
   <div class="col-12">
     <div class="btn-group" appDropdown>
 
-      [ <a href="#" (click)="onAddToShoppingList()">to shopping list</a> ]
-      [ <a href="#">edit</a> ]
-      [ <a href="#">delete</a> ]
+      [ <a (click)="onAddToShoppingList()">to shopping list</a> ]
+      [ <a routerLink="edit">edit</a> ]
+      [ <a>delete</a> ]
 
     </div>
   </div>
 </div>
 
-<div class="row">
-  <div class="col-12">
-    {{ recipe.description }}
-  </div>
-</div>
 
 <div class="row">
   <div class="col-12">
