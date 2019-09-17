@@ -18,9 +18,9 @@ export class RecipesComponent implements OnInit, OnDestroy {
   constructor(private recipeService: RecipeService, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.recipeSubscriptin = this.recipeService.recipeSelected.subscribe((recipe: Recipe) => {
-      this.recipeDetail = recipe;
-    });
+    // this.recipeSubscriptin = this.recipeService.recipeSelected.subscribe((recipe: Recipe) => {
+    //   this.recipeDetail = recipe;
+    // });
   }
 
   ngOnDestroy(): void {
