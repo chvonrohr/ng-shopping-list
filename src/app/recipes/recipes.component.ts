@@ -8,23 +8,13 @@ import { Subscription } from 'rxjs';
   selector: 'app-recipes',
   templateUrl: './recipes.component.html',
   styleUrls: ['./recipes.component.scss'],
-  providers: [ RecipeService ]
 })
-export class RecipesComponent implements OnInit, OnDestroy {
+export class RecipesComponent{
 
   recipeDetail: Recipe;
   recipeSubscriptin: Subscription;
 
-  constructor(private recipeService: RecipeService, private route: ActivatedRoute) { }
+  // constructor(private recipeService: RecipeService, private route: ActivatedRoute) { }
 
-  ngOnInit() {
-    // this.recipeSubscriptin = this.recipeService.recipeSelected.subscribe((recipe: Recipe) => {
-    //   this.recipeDetail = recipe;
-    // });
-  }
-
-  ngOnDestroy(): void {
-    this.recipeSubscriptin.unsubscribe();
-  }
 
 }
