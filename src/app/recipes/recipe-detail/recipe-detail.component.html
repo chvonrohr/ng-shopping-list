@@ -1,40 +1,44 @@
-<div class="row">
-  <div class="col-12">
-    <img src="" alt="" />
-  </div>
-</div>
+<div  *ngIf="recipe">
 
-<div class="row">
-  <div class="col-12">
-    <h1>{{ recipe.name }}</h1>
-    <p>{{ recipe.desc }}</p>
-
-    <img [src]="recipe.imagePath" style="width: 200px; height: auto;" class="mb-3" />
-  </div>
-</div>
-
-<div class="row">
-  <div class="col-12">
-    <div class="btn-group" appDropdown>
-
-      [ <a (click)="onAddToShoppingList()">to shopping list</a> ]
-      [ <a routerLink="edit">edit</a> ]
-      [ <a (click)="onRemove()">delete</a> ]
-
+  <div class="row">
+    <div class="col-12">
+      <img src="" alt="" />
     </div>
   </div>
-</div>
 
+  <div class="row">
+    <div class="col-12">
+      <h1>{{ recipe.name }}</h1>
+      <p>{{ recipe.desc }}</p>
 
-<div class="row">
-  <div class="col-12">
-    <ul class="list-group">
-      <li
-        class="list-group-item"
-        *ngFor="let ingredient of recipe.ingredients"
-      >
-        {{ ingredient.name }} - {{ ingredient.amount }}
-      </li>
-    </ul>
+      <img [src]="recipe.imagePath" style="width: 200px; height: auto;" class="mb-3" />
+    </div>
   </div>
+
+  <div class="row">
+    <div class="col-12">
+      <div class="btn-group" appDropdown>
+
+        [ <a (click)="onAddToShoppingList()">to shopping list</a> ]
+        [ <a routerLink="edit">edit</a> ]
+        [ <a (click)="onRemove()">delete</a> ]
+
+      </div>
+    </div>
+  </div>
+
+
+  <div class="row" *ngIf="recipe">
+    <div class="col-12">
+      <ul class="list-group">
+        <li
+          class="list-group-item"
+          *ngFor="let ingredient of recipe.ingredients"
+        >
+          {{ ingredient.name }} - {{ ingredient.amount }}
+        </li>
+      </ul>
+    </div>
+  </div>
+
 </div>
